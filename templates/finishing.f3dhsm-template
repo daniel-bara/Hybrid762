@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<template-document xmlns="http://www.hsmworks.com/namespace/hsmworks/document/template" version="1.0">
+
+  <user-description></user-description>
+
+  <iconID id="2104991042"/>
+
+  <template description="Scallop1" strategy="scallop_new" toolPresetId="{53ef4098-5547-4911-922f-e09b7e027af7}" unit="millimeters" version="112">
+    <tool guid="dc092108-3efb-4f8e-b292-7b622ce44a49" tool-library-version="26" type="ball end mill" unit="millimeters" version="1.5">
+      <description>8mm Ball Endmill</description>
+      <nc break-control="0" diameter-offset="2" length-offset="2" live-tool="1" manual-tool-change="0" number="2" turret="0"/>
+      <coolant mode="flood"/>
+      <material name="unspecified"/>
+      <body assembly-gauge-length="85.3396" body-length="22.5" coolant-support="no" corner-radius="4" diameter="8" flute-length="20" number-of-flutes="3" overall-length="63" shaft-diameter="8" shoulder-length="20" thread-pitch="0" thread-profile-angle="60"/>
+      <holder description="Maritool CAT40-ER32-2.35" gauge-length="62.8396" product-id="CAT40-ER32-2.35" vendor="Maritool">
+        <section diameter="38.1" length="0"/>
+        <section diameter="50.038" length="3.7592"/>
+        <section diameter="50.038" length="21.2344"/>
+        <section diameter="39.878" length="0"/>
+        <section diameter="39.878" length="4.4704"/>
+        <section diameter="44.45" length="2.286"/>
+        <section diameter="44.45" length="10.795"/>
+        <section diameter="46.99" length="1.27"/>
+        <section diameter="62.0268" length="0"/>
+        <section diameter="63.5508" length="0.762"/>
+        <section diameter="63.5508" length="3.683"/>
+        <section diameter="56.261" length="2.0066"/>
+        <section diameter="56.261" length="2.9972"/>
+        <section diameter="63.5508" length="2.0066"/>
+        <section diameter="63.5508" length="3.6322"/>
+        <section diameter="62.0268" length="0.762"/>
+        <section diameter="44.45" length="0"/>
+        <section diameter="44.45" length="3.175"/>
+      </holder>
+      <motion clockwise="yes" cutting-feedrate="1000" entry-feedrate="1000" exit-feedrate="1000" feed-mode="per-minute" plunge-feedrate="333.333" ramp-feedrate="333.333" ramp-spindle-rpm="5000" retract-feedrate="0" spindle-rpm="5000" transition-feedrate="1000"/>
+      <presets>
+        <preset description="SAMPLE preset for slotting in Aluminum" id="{53ef4098-5547-4911-922f-e09b7e027af7}" name="Default preset">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="5000"/>
+          <parameter key="tool_rampSpindleSpeed" value="5000"/>
+          <parameter key="tool_feedCutting" value="1000"/>
+          <parameter key="tool_feedEntry" value="1000"/>
+          <parameter key="tool_feedExit" value="1000"/>
+          <parameter key="tool_feedPlunge" value="333.33333333333331"/>
+          <parameter key="tool_feedTransition" value="1000"/>
+          <parameter key="tool_feedRamp" value="333.33333333333331"/>
+          <parameter key="tool_presetMaterialCategory" value="all"/>
+          <parameter key="tool_presetMaterialQuery" value=""/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Aluminum" id="{14047904-72e6-4cbf-8300-0c273fdddbf2}" name="Aluminum - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="12000"/>
+          <parameter key="tool_rampSpindleSpeed" value="12000"/>
+          <parameter key="tool_feedCutting" value="3176.721649484537"/>
+          <parameter key="tool_feedEntry" value="3176.721649484537"/>
+          <parameter key="tool_feedExit" value="3176.721649484537"/>
+          <parameter key="tool_feedPlunge" value="1058.9072164948454"/>
+          <parameter key="tool_feedTransition" value="3176.721649484537"/>
+          <parameter key="tool_feedRamp" value="3176.721649484537"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Aluminum "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Aluminum" id="{0e98304a-dd20-485f-a6c6-0b39c6ad6ab1}" name="Aluminum - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="12000"/>
+          <parameter key="tool_rampSpindleSpeed" value="12000"/>
+          <parameter key="tool_feedCutting" value="3176.721649484537"/>
+          <parameter key="tool_feedEntry" value="3176.721649484537"/>
+          <parameter key="tool_feedExit" value="3176.721649484537"/>
+          <parameter key="tool_feedPlunge" value="1058.9072164948454"/>
+          <parameter key="tool_feedTransition" value="3176.721649484537"/>
+          <parameter key="tool_feedRamp" value="3176.721649484537"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Aluminum "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Aluminum" id="{e49c4e37-2b52-4f92-84c7-c2ce218c8103}" name="Aluminum - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="12000"/>
+          <parameter key="tool_rampSpindleSpeed" value="12000"/>
+          <parameter key="tool_feedCutting" value="4014.1892783505168"/>
+          <parameter key="tool_feedEntry" value="4014.1892783505168"/>
+          <parameter key="tool_feedExit" value="4014.1892783505168"/>
+          <parameter key="tool_feedPlunge" value="1338.0630927835057"/>
+          <parameter key="tool_feedTransition" value="4014.1892783505168"/>
+          <parameter key="tool_feedRamp" value="4014.1892783505168"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Aluminum "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Brass" id="{957b3166-acaf-458a-8445-212dc1af75d9}" name="Brass - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="1283.848445708604"/>
+          <parameter key="tool_feedEntry" value="1283.848445708604"/>
+          <parameter key="tool_feedExit" value="1283.848445708604"/>
+          <parameter key="tool_feedPlunge" value="427.949481902868"/>
+          <parameter key="tool_feedTransition" value="1283.848445708604"/>
+          <parameter key="tool_feedRamp" value="1283.848445708604"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Brass "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Brass" id="{e83cb2cb-5a5f-4819-bc6a-95894824da01}" name="Brass - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="1283.848445708604"/>
+          <parameter key="tool_feedEntry" value="1283.848445708604"/>
+          <parameter key="tool_feedExit" value="1283.848445708604"/>
+          <parameter key="tool_feedPlunge" value="427.949481902868"/>
+          <parameter key="tool_feedTransition" value="1283.848445708604"/>
+          <parameter key="tool_feedRamp" value="1283.848445708604"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Brass "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Brass" id="{bd77fc34-3c55-44ea-ae5f-4f89d1866a7a}" name="Brass - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="1622.3977122548165"/>
+          <parameter key="tool_feedEntry" value="1622.3977122548165"/>
+          <parameter key="tool_feedExit" value="1622.3977122548165"/>
+          <parameter key="tool_feedPlunge" value="540.79923741827213"/>
+          <parameter key="tool_feedTransition" value="1622.3977122548165"/>
+          <parameter key="tool_feedRamp" value="1622.3977122548165"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Brass "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Copper" id="{77c24baa-55a6-45d1-aac7-058189697f2f}" name="Copper - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_rampSpindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_feedCutting" value="577.73180056887202"/>
+          <parameter key="tool_feedEntry" value="577.73180056887202"/>
+          <parameter key="tool_feedExit" value="577.73180056887202"/>
+          <parameter key="tool_feedPlunge" value="192.57726685629061"/>
+          <parameter key="tool_feedTransition" value="577.73180056887202"/>
+          <parameter key="tool_feedRamp" value="577.73180056887202"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Copper "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Copper" id="{8f258528-be5c-41cb-91fd-3ef958fba045}" name="Copper - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_rampSpindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_feedCutting" value="577.73180056887202"/>
+          <parameter key="tool_feedEntry" value="577.73180056887202"/>
+          <parameter key="tool_feedExit" value="577.73180056887202"/>
+          <parameter key="tool_feedPlunge" value="192.57726685629061"/>
+          <parameter key="tool_feedTransition" value="577.73180056887202"/>
+          <parameter key="tool_feedRamp" value="577.73180056887202"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Copper "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Copper" id="{64ad4b0b-d64c-445f-b456-e7ef75db4132}" name="Copper - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_rampSpindleSpeed" value="2728.7114993105456"/>
+          <parameter key="tool_feedCutting" value="730.07897051466728"/>
+          <parameter key="tool_feedEntry" value="730.07897051466728"/>
+          <parameter key="tool_feedExit" value="730.07897051466728"/>
+          <parameter key="tool_feedPlunge" value="243.35965683822241"/>
+          <parameter key="tool_feedTransition" value="730.07897051466728"/>
+          <parameter key="tool_feedRamp" value="730.07897051466728"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Copper "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Low Carbon Steel" id="{84698492-6fdb-421f-bb58-a6f9043243f2}" name="Low Carbon Steel - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="552.45286720701131"/>
+          <parameter key="tool_feedEntry" value="552.45286720701131"/>
+          <parameter key="tool_feedExit" value="552.45286720701131"/>
+          <parameter key="tool_feedPlunge" value="184.15095573567041"/>
+          <parameter key="tool_feedTransition" value="552.45286720701131"/>
+          <parameter key="tool_feedRamp" value="552.45286720701131"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Low Carbon Steel "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Low Carbon Steel" id="{3316c4e5-a7d6-4b2a-9bd7-b5bb9e4e5579}" name="Low Carbon Steel - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="496.39294289107301"/>
+          <parameter key="tool_feedEntry" value="496.39294289107301"/>
+          <parameter key="tool_feedExit" value="496.39294289107301"/>
+          <parameter key="tool_feedPlunge" value="165.46431429702437"/>
+          <parameter key="tool_feedTransition" value="496.39294289107301"/>
+          <parameter key="tool_feedRamp" value="496.39294289107301"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Low Carbon Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Low Carbon Steel" id="{89d26506-e563-4744-920d-2886b056edc6}" name="Low Carbon Steel - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_rampSpindleSpeed" value="6063.8033318012122"/>
+          <parameter key="tool_feedCutting" value="632.46956570473219"/>
+          <parameter key="tool_feedEntry" value="632.46956570473208"/>
+          <parameter key="tool_feedExit" value="632.46956570473208"/>
+          <parameter key="tool_feedPlunge" value="210.82318856824412"/>
+          <parameter key="tool_feedTransition" value="632.46956570473219"/>
+          <parameter key="tool_feedRamp" value="632.46956570473208"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Low Carbon Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in High Carbon Steel" id="{2d7dd412-ecd6-4a97-abaa-15a33b971e5d}" name="High Carbon Steel - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="201.98646423490288"/>
+          <parameter key="tool_feedEntry" value="201.98646423490288"/>
+          <parameter key="tool_feedExit" value="201.98646423490288"/>
+          <parameter key="tool_feedPlunge" value="67.328821411634323"/>
+          <parameter key="tool_feedTransition" value="201.98646423490288"/>
+          <parameter key="tool_feedRamp" value="201.98646423490288"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="High Carbon Steel "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in High Carbon Steel" id="{b1a989e1-6846-4066-a961-2ea27a603e41}" name="High Carbon Steel - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="181.84868589417661"/>
+          <parameter key="tool_feedEntry" value="181.84868589417661"/>
+          <parameter key="tool_feedExit" value="181.84868589417661"/>
+          <parameter key="tool_feedPlunge" value="60.616228631392211"/>
+          <parameter key="tool_feedTransition" value="181.84868589417661"/>
+          <parameter key="tool_feedRamp" value="181.84868589417661"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="High Carbon Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in High Carbon Steel" id="{f2ed439a-b48f-4018-8bb3-d5eb07afe27f}" name="High Carbon Steel - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="232.41210381105043"/>
+          <parameter key="tool_feedEntry" value="232.41210381105043"/>
+          <parameter key="tool_feedExit" value="232.41210381105043"/>
+          <parameter key="tool_feedPlunge" value="77.470701270350133"/>
+          <parameter key="tool_feedTransition" value="232.41210381105043"/>
+          <parameter key="tool_feedRamp" value="232.41210381105043"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="High Carbon Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Plastics" id="{e70cd219-2a09-4d7f-806e-df1b5c3b7a72}" name="Plastics - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_rampSpindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_feedCutting" value="2413.1655520139848"/>
+          <parameter key="tool_feedEntry" value="2413.1655520139848"/>
+          <parameter key="tool_feedExit" value="2413.1655520139848"/>
+          <parameter key="tool_feedPlunge" value="804.38851733799504"/>
+          <parameter key="tool_feedTransition" value="2413.1655520139848"/>
+          <parameter key="tool_feedRamp" value="2413.1655520139848"/>
+          <parameter key="tool_presetMaterialCategory" value="plastic"/>
+          <parameter key="tool_presetMaterialQuery" value="Plastics "/>
+          <parameter key="tool_stepdown" value="2.3421706307330141"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Plastics" id="{5d4c1b38-3cce-46ee-896e-fc7658b28ea2}" name="Plastics - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_rampSpindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_feedCutting" value="2413.1655520139848"/>
+          <parameter key="tool_feedEntry" value="2413.1655520139848"/>
+          <parameter key="tool_feedExit" value="2413.1655520139848"/>
+          <parameter key="tool_feedPlunge" value="804.38851733799504"/>
+          <parameter key="tool_feedTransition" value="2413.1655520139848"/>
+          <parameter key="tool_feedRamp" value="2413.1655520139848"/>
+          <parameter key="tool_presetMaterialCategory" value="plastic"/>
+          <parameter key="tool_presetMaterialQuery" value="Plastics "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Plastics" id="{c6f625fa-75db-4c5e-bd72-f994bb1e869d}" name="Plastics - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_rampSpindleSpeed" value="9095.7049977018196"/>
+          <parameter key="tool_feedCutting" value="3034.723834987351"/>
+          <parameter key="tool_feedEntry" value="3034.723834987351"/>
+          <parameter key="tool_feedExit" value="3034.723834987351"/>
+          <parameter key="tool_feedPlunge" value="1011.57461166245"/>
+          <parameter key="tool_feedTransition" value="3034.723834987351"/>
+          <parameter key="tool_feedRamp" value="3034.723834987351"/>
+          <parameter key="tool_presetMaterialCategory" value="plastic"/>
+          <parameter key="tool_presetMaterialQuery" value="Plastics "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Stainless Steel" id="{ef0dc2be-2176-4171-9cfc-fdef147d8628}" name="Stainless Steel - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="201.98646423490288"/>
+          <parameter key="tool_feedEntry" value="201.98646423490288"/>
+          <parameter key="tool_feedExit" value="201.98646423490288"/>
+          <parameter key="tool_feedPlunge" value="67.328821411634323"/>
+          <parameter key="tool_feedTransition" value="201.98646423490288"/>
+          <parameter key="tool_feedRamp" value="201.98646423490288"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Stainless Steel "/>
+          <parameter key="tool_stepdown" value="2.7999999999999998"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Stainless Steel" id="{16fce1d6-0f57-4f85-8e1d-5c79f01dd93f}" name="Stainless Steel - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="181.84868589417661"/>
+          <parameter key="tool_feedEntry" value="181.84868589417661"/>
+          <parameter key="tool_feedExit" value="181.84868589417661"/>
+          <parameter key="tool_feedPlunge" value="60.616228631392211"/>
+          <parameter key="tool_feedTransition" value="181.84868589417661"/>
+          <parameter key="tool_feedRamp" value="181.84868589417661"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Stainless Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Stainless Steel" id="{d73d0cbb-b610-4421-bbdc-59a3a51d8637}" name="Stainless Steel - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_rampSpindleSpeed" value="2425.5213327204851"/>
+          <parameter key="tool_feedCutting" value="232.41210381105043"/>
+          <parameter key="tool_feedEntry" value="232.41210381105043"/>
+          <parameter key="tool_feedExit" value="232.41210381105043"/>
+          <parameter key="tool_feedPlunge" value="77.470701270350133"/>
+          <parameter key="tool_feedTransition" value="232.41210381105043"/>
+          <parameter key="tool_feedRamp" value="232.41210381105043"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Stainless Steel "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+        <preset description="SAMPLE preset for slotting in Titanium" id="{749b0c16-ec73-44c4-9b6a-fb1bb64010fb}" name="Titanium - Slotting">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_rampSpindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_feedCutting" value="261.8839508825111"/>
+          <parameter key="tool_feedEntry" value="261.8839508825111"/>
+          <parameter key="tool_feedExit" value="261.8839508825111"/>
+          <parameter key="tool_feedPlunge" value="87.294650294170424"/>
+          <parameter key="tool_feedTransition" value="261.8839508825111"/>
+          <parameter key="tool_feedRamp" value="261.8839508825111"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Titanium "/>
+          <parameter key="tool_stepdown" value="2.159038883026219"/>
+          <parameter key="tool_stepover" value="8"/>
+        </preset>
+        <preset description="SAMPLE preset for roughing in Titanium" id="{fece53ec-7a7f-4c5f-843b-7221595dbd01}" name="Titanium - Roughing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_rampSpindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_feedCutting" value="261.35508721047972"/>
+          <parameter key="tool_feedEntry" value="261.35508721047972"/>
+          <parameter key="tool_feedExit" value="261.35508721047972"/>
+          <parameter key="tool_feedPlunge" value="87.118362403493251"/>
+          <parameter key="tool_feedTransition" value="261.35508721047972"/>
+          <parameter key="tool_feedRamp" value="261.35508721047972"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Titanium "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="1.633736504586411"/>
+        </preset>
+        <preset description="SAMPLE preset for finishing in Titanium" id="{fe6da1e9-be2a-42be-a857-e298129f16c6}" name="Titanium - Finishing">
+          <parameter key="tool_coolant" value="flood"/>
+          <parameter key="tool_spindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_rampSpindleSpeed" value="1819.1409995403649"/>
+          <parameter key="tool_feedCutting" value="261.8839508825111"/>
+          <parameter key="tool_feedEntry" value="261.8839508825111"/>
+          <parameter key="tool_feedExit" value="261.8839508825111"/>
+          <parameter key="tool_feedPlunge" value="87.294650294170424"/>
+          <parameter key="tool_feedTransition" value="261.8839508825111"/>
+          <parameter key="tool_feedRamp" value="261.8839508825111"/>
+          <parameter key="tool_presetMaterialCategory" value="metal"/>
+          <parameter key="tool_presetMaterialQuery" value="Titanium "/>
+          <parameter key="tool_stepdown" value="15"/>
+          <parameter key="tool_stepover" value="0.98634629434207299"/>
+        </preset>
+      </presets>
+    </tool>
+    <parameter expression="false" name="advancedMode"/>
+    <parameter expression="false" name="betaMode"/>
+    <parameter expression="false" name="alphaMode"/>
+    <parameter expression="false" name="isXpress"/>
+    <parameter expression="true" name="licenseMultiaxis"/>
+    <parameter expression="true" name="license3D"/>
+    <parameter expression="true" name="metric"/>
+    <parameter expression="true" name="isAssemblyDocument"/>
+    <parameter expression="'operation'" name="context"/>
+    <parameter expression="'scallop_new'" name="strategy"/>
+    <parameter expression="''" name="operation_description"/>
+    <parameter expression="false" name="tab_tool"/>
+    <parameter expression="true" name="group_tool"/>
+    <parameter expression="false" name="sandvik_tool_params"/>
+    <parameter expression="false" name="sandvik_select_assembly"/>
+    <parameter expression="false" name="sandvik_get_tool_recommendation"/>
+    <parameter expression="false" name="sandvik_edit_assembly"/>
+    <parameter expression="false" name="tool_select"/>
+    <parameter expression="'ball end mill'" name="tool_type"/>
+    <parameter expression="true" name="undercut"/>
+    <parameter expression="tool_type == 'turning boring' || tool_type == 'turning general' || tool_type == 'turning threading' || tool_type == 'turning grooving' || tool_type == 'turning custom'" name="tool_isTurning"/>
+    <parameter expression="tool_type == 'thread mill' || tool_type == 'form mill' || tool_type == 'tapered mill' || tool_type == 'radius mill' || tool_type == 'dovetail mill' || tool_type == 'face mill' || tool_type == 'bull nose end mill' || tool_type == 'slot mill' || tool_type == 'flat end mill' || tool_type == 'ball end mill' || tool_type == 'lollipop mill' || tool_type == 'chamfer mill' || tool_type == 'circle segment taper' || tool_type == 'circle segment barrel' || tool_type == 'circle segment oval' || tool_type == 'circle segment lens'" name="tool_isMill"/>
+    <parameter expression="tool_type == 'counter bore' || tool_type == 'boring bar' || tool_type == 'spot drill' || tool_type == 'counter sink' || tool_type == 'center drill' || tool_type == 'tap right hand' || tool_type == 'tap left hand' || tool_type == 'drill' || tool_type == 'reamer' || tool_type == 'block drill'" name="tool_isDrill"/>
+    <parameter expression="tool_type == 'laser cutter' || tool_type == 'waterjet' || tool_type == 'plasma cutter'" name="tool_isJet"/>
+    <parameter expression="tool_type == 'laser powder' || tool_type == 'laser wire' || tool_type == 'electric arc wire'" name="tool_isDepositing"/>
+    <parameter expression="'tapered_bull_nose'" name="tool_taperedType"/>
+    <parameter expression="'millimeters'" name="tool_unit"/>
+    <parameter expression="2" name="tool_number"/>
+    <parameter expression="tool_number" name="tool_diameterOffset"/>
+    <parameter expression="tool_number" name="tool_lengthOffset"/>
+    <parameter expression="tool_number" name="tool_compensationOffset"/>
+    <parameter expression="0" name="tool_turret"/>
+    <parameter expression="false" name="tool_manualToolChange"/>
+    <parameter expression="false" name="tool_breakControl"/>
+    <parameter expression="true" name="tool_live"/>
+    <parameter expression="'flood'" name="tool_coolant"/>
+    <parameter expression="'unspecified'" name="tool_material"/>
+    <parameter expression="'8mm Ball Endmill'" name="tool_description"/>
+    <parameter expression="''" name="tool_comment"/>
+    <parameter expression="''" name="tool_vendor"/>
+    <parameter expression="''" name="tool_productId"/>
+    <parameter expression="''" name="tool_productLink"/>
+    <parameter expression="8." name="tool_diameter"/>
+    <parameter expression="0.0" name="tool_tipDiameter"/>
+    <parameter expression="0.0" name="tool_tipOffset"/>
+    <parameter expression="4." name="tool_cornerRadius"/>
+    <parameter expression="tool_taperAngle * 2" name="tool_inclusiveAngle"/>
+    <parameter expression="0.0" name="tool_taperAngle"/>
+    <parameter expression="(tool_type == 'counter sink') ? 90.0deg : ((tool_type == 'spot drill') ? 120deg : 118.0deg)" name="tool_tipAngle"/>
+    <parameter expression="60." name="tool_threadProfileAngle"/>
+    <parameter expression="0.0" name="tool_tipLength"/>
+    <parameter expression="20." name="tool_fluteLength"/>
+    <parameter expression="tool_fluteLength" name="tool_shoulderLength"/>
+    <parameter expression="22.5" name="tool_bodyLength"/>
+    <parameter expression="63." name="tool_overallLength"/>
+    <parameter expression="tool_diameter" name="tool_shaftDiameter"/>
+    <parameter expression="tool_shaftDiameter/2" name="tool_segmentHeight"/>
+    <parameter expression="tool_shaftDiameter*2" name="tool_segmentDiameterLower"/>
+    <parameter expression="tool_shaftDiameter*2" name="tool_segmentDiameterUpper"/>
+    <parameter expression="Math.max((tool_bodyLength - tool_shoulderLength)/2; 1.0)" name="tool_shaftSegmentHeight"/>
+    <parameter expression="tool_diameter" name="tool_shaftSegmentDiameterLower"/>
+    <parameter expression="tool_shaftDiameter" name="tool_shaftSegmentDiameterUpper"/>
+    <parameter expression="0.0" name="tool_threadPitch"/>
+    <parameter expression="1" name="tool_numberOfTeeth"/>
+    <parameter expression="3" name="tool_numberOfFlutes"/>
+    <parameter expression="tool_type == 'circle segment barrel' ? (tool_diameter / 200) : (tool_diameter / 2)" name="tool_upperRadius"/>
+    <parameter expression="(tool_type == 'circle segment taper' ? (tool_diameter * 31.25) : (tool_diameter * 0.6))" name="tool_profileRadius"/>
+    <parameter expression="(tool_type == 'circle segment taper' ? (tool_upperRadius / 2) : ((tool_type == 'circle segment barrel' ? tool_upperRadius : ((tool_type == 'circle segment lens' ? (tool_diameter): (tool_diameter / 200))))))" name="tool_lowerRadius"/>
+    <parameter expression="tool_fluteLength / 2" name="tool_axialDistance"/>
+    <parameter expression="true" name="holder_attached"/>
+    <parameter expression="'Maritool CAT40-ER32-2.35'" name="holder_description"/>
+    <parameter expression="''" name="holder_comment"/>
+    <parameter expression="'Maritool'" name="holder_vendor"/>
+    <parameter expression="'CAT40-ER32-2.35'" name="holder_productId"/>
+    <parameter expression="''" name="holder_productLink"/>
+    <parameter expression="''" name="holder_libraryName"/>
+    <parameter expression="62.8396" name="tool_holderGaugeLength"/>
+    <parameter expression="85.3396" name="tool_assemblyGaugeLength"/>
+    <parameter expression="true" name="group_feedspeed"/>
+    <parameter expression="false" name="sandvik_get_cutting_data"/>
+    <parameter expression="false" name="preset_select"/>
+    <parameter expression="tool_type == 'probe' ? 0 : tool_type == 'tap right hand' || tool_type == 'tap left hand' ? 500rpm : 5000rpm" name="tool_spindleSpeed"/>
+    <parameter expression="tool_isTurning ? (tool_unit == 'millimeters' ? 25mm : 1.0in) : tool_diameter" name="tool_stockDiameter"/>
+    <parameter expression="tool_diameter * Math.PI * tool_spindleSpeed" name="tool_surfaceSpeed"/>
+    <parameter expression="tool_spindleSpeed" name="tool_rampSpindleSpeed"/>
+    <parameter expression="1000." name="tool_feedCutting"/>
+    <parameter expression="tool_spindleSpeed > 0 ? tool_feedCutting/(tool_spindleSpeed * tool_numberOfFlutes) : 0.0" name="tool_feedPerTooth"/>
+    <parameter expression="tool_type == 'probe' || tool_isDepositing ? 1000mmpm : tool_feedCutting" name="tool_feedEntry"/>
+    <parameter expression="tool_isDepositing ? 1000mmpm : tool_feedCutting" name="tool_feedExit"/>
+    <parameter expression="tool_feedCutting" name="tool_feedTransition"/>
+    <parameter expression="tool_feedPlunge" name="tool_feedRamp"/>
+    <parameter expression="(tool_type=='drill' || tool_type=='reamer' || tool_isDepositing)?(1000mmpm):(tool_feedCutting/3)" name="tool_feedPlunge"/>
+    <parameter expression="tool_spindleSpeed > 0 ? tool_feedPlunge/tool_spindleSpeed : 0.0" name="tool_feedPerRevolution"/>
+    <parameter expression="tool_feedPlunge" name="tool_feedRetract"/>
+    <parameter expression="true" name="tool_clockwise"/>
+    <parameter expression="'none'" name="featureOperationId"/>
+    <parameter expression="23.6" name="surfaceZHigh"/>
+    <parameter expression="0.0" name="surfaceZLow"/>
+    <parameter expression="-23.89393260185836" name="surfaceXLow"/>
+    <parameter expression="23.89393260185836" name="surfaceXHigh"/>
+    <parameter expression="-23.89393260185836" name="surfaceYLow"/>
+    <parameter expression="23.89393260185836" name="surfaceYHigh"/>
+    <parameter expression="24.6" name="stockZHigh"/>
+    <parameter expression="0.0" name="stockZLow"/>
+    <parameter expression="-24.89393260185836" name="stockXLow"/>
+    <parameter expression="24.89393260185836" name="stockXHigh"/>
+    <parameter expression="-24.89393260185836" name="stockYLow"/>
+    <parameter expression="24.89393260185836" name="stockYHigh"/>
+    <parameter expression="tiltTool" name="useShaftAndHolder"/>
+    <parameter expression="'trimmed'" name="shaftAndHolderMode"/>
+    <parameter expression="true" name="useShaft"/>
+    <parameter expression="1.0mm" name="shaftClearance"/>
+    <parameter expression="true" name="useHolder"/>
+    <parameter expression="5.0mm" name="holderClearance"/>
+    <parameter expression="false" name="tab_geometry"/>
+    <parameter expression="true" name="group_geometry"/>
+    <parameter expression="'silhouette'" name="boundaryMode"/>
+    <parameter expression="boundaryMode == 'silhouette'" name="useSilhouetteAsMachiningBoundary"/>
+    <parameter expression="Math.max(tool_diameter * 0.05; 2.5)" name="silhouetteAperture"/>
+    <parameter expression="(Math.PI/4 * tool_diameter * tool_diameter) * 0.05" name="minimumSilhouetteArea"/>
+    <parameter expression="false" name="machiningBoundarySel"/>
+    <parameter expression="'center'" name="boundaryContainment"/>
+    <parameter expression="stockToLeave" name="boundaryOffset"/>
+    <parameter expression="(boundaryContainment == 'center') ? boundaryOffset : ((boundaryContainment == 'inside') ? (-boundaryOffset-tool_diameter/2) : (boundaryOffset+tool_diameter/2))" name="machiningBoundaryOffset"/>
+    <parameter expression="false" name="boundaryConfineTool"/>
+    <parameter expression="true" name="contactOnly"/>
+    <parameter expression="true" name="machineAreasUsingBoundaries"/>
+    <parameter expression="tool_diameter * 0.1" name="boundaryOverlap"/>
+    <parameter expression="false" name="slopeConfinement"/>
+    <parameter expression="0deg" name="slopeAngleFrom"/>
+    <parameter expression="90.0deg" name="slopeAngleTo"/>
+    <parameter expression="false" name="useRestMachining"/>
+    <parameter expression="'previousOperations'" name="restMaterialSource"/>
+    <parameter expression="false" name="restMaterialBodies"/>
+    <parameter expression="false" name="restMaterialFromJob"/>
+    <parameter expression="0" name="restMaterialOperation"/>
+    <parameter expression="true" name="restMaterialUnion"/>
+    <parameter expression="true" name="restMaterialPrevious"/>
+    <parameter expression="tool_diameter * 2" name="restMaterialCutterDiameter"/>
+    <parameter expression="restMaterialCutterDiameter * 0.5" name="restMaterialCornerRadius"/>
+    <parameter expression="0deg" name="restMaterialTaperAngle"/>
+    <parameter expression="restMaterialCutterDiameter" name="restMaterialShoulderLength"/>
+    <parameter expression="0mm" name="restMaterialStockToLeave"/>
+    <parameter expression="1mm" name="restMaterialResolution"/>
+    <parameter expression="tool_diameter * 0.1" name="restMaterialOverlap"/>
+    <parameter expression="''" name="restMaterialFile"/>
+    <parameter expression="''" name="restMaterialTool"/>
+    <parameter expression="'use as computed'" name="restMaterialAdjustment"/>
+    <parameter expression="-ignoreStockLessThan" name="restMaterialAdjustmentOffset"/>
+    <parameter expression="0.5mm" name="ignoreStockLessThan"/>
+    <parameter expression="false" name="overrideToolView"/>
+    <parameter expression="'axesZX'" name="view_orientation_mode"/>
+    <parameter expression="false" name="view_orientation_axisZ"/>
+    <parameter expression="false" name="view_orientation_flipZ"/>
+    <parameter expression="'wcs'" name="view_orientation_axesZX_unselected_default"/>
+    <parameter expression="'wcs'" name="view_orientation_axesZY_unselected_default"/>
+    <parameter expression="'wcs'" name="view_orientation_axesXY_unselected_default"/>
+    <parameter expression="false" name="view_orientation_cSys"/>
+    <parameter expression="false" name="view_orientation_surfaceNormal"/>
+    <parameter expression="0.0" name="view_turn_from_recipe"/>
+    <parameter expression="0.0" name="view_tilt_from_recipe"/>
+    <parameter expression="false" name="view_align_to_view"/>
+    <parameter expression="false" name="view_align_to_view_direction"/>
+    <parameter expression="false" name="toolOrientationAccessibilityShadingEnabled"/>
+    <parameter expression="false" name="view_orientation_axisX"/>
+    <parameter expression="false" name="view_orientation_flipX"/>
+    <parameter expression="false" name="view_orientation_axisY"/>
+    <parameter expression="false" name="view_orientation_flipY"/>
+    <parameter expression="(view_orientation_mode == 'surfaceNormalX' || view_orientation_mode == 'surfaceNormalY') ? 'surfacePointOrigin' : 'jobOrigin'" name="view_origin_mode"/>
+    <parameter expression="false" name="view_origin_point"/>
+    <parameter expression="true" name="view_model_point"/>
+    <parameter expression="'top center'" name="view_origin_boxPoint"/>
+    <parameter expression="true" name="view_stock_point"/>
+    <parameter expression="false" name="machineOrientationInfo"/>
+    <parameter expression="false" name="overrideModel"/>
+    <parameter expression="false" name="model"/>
+    <parameter expression="true" name="includeSetupModel"/>
+    <parameter expression="false" name="useCheckSurface"/>
+    <parameter expression="'avoid'" name="touchAvoidMode"/>
+    <parameter expression="false" name="checkSurfaceSelection"/>
+    <parameter expression="false" name="viewAbsoluteClearances"/>
+    <parameter expression="false" name="checkSurfaceSelectionSets"/>
+    <parameter expression="0 mm" name="radialClearanceInfo"/>
+    <parameter expression="0 mm" name="axialClearanceInfo"/>
+    <parameter expression="0 mm" name="clearanceInfo"/>
+    <parameter expression="tolerance" name="checkSurfaceClearance"/>
+    <parameter expression="useCheckSurface &amp;&amp; ((touchAvoidMode == 'avoid') &amp;&amp; !Util.featureFlagEnabled('migrate-to-advanced-machine-avoid'))" name="trimCheckSurfaces"/>
+    <parameter expression="false" name="tab_heights"/>
+    <parameter expression="Util.featureFlagEnabled('4-axis-machining-type') &amp;&amp; (multiAxisMachiningType == 'four_axis' || multiAxisMachiningType == 'five_axis')" name="isClearanceAreaEnabled"/>
+    <parameter expression="true" name="clearanceArea_group"/>
+    <parameter expression="'plane'" name="clearanceAreaType"/>
+    <parameter expression="'toolAxisZ'" name="clearanceArea_orientation_mode"/>
+    <parameter expression="false" name="clearanceArea_orientation_selAxis"/>
+    <parameter expression="false" name="clearanceArea_orientation_flipAxis"/>
+    <parameter expression="(clearanceArea_orientation_mode == 'surfaceNormalX' || clearanceArea_orientation_mode == 'surfaceNormalY') ? 'surfacePointOrigin' : 'jobOrigin'" name="clearanceArea_origin_mode"/>
+    <parameter expression="false" name="clearanceArea_origin_point"/>
+    <parameter expression="true" name="clearanceArea_model_point"/>
+    <parameter expression="'top center'" name="clearanceArea_origin_boxPoint"/>
+    <parameter expression="true" name="clearanceArea_stock_point"/>
+    <parameter expression="true" name="clearanceHeight_group"/>
+    <parameter expression="'from retract height'" name="clearanceHeight_mode"/>
+    <parameter expression="false" name="clearanceHeight_ref"/>
+    <parameter expression="10mm" name="clearanceHeight_offset"/>
+    <parameter expression="39.6" name="clearanceHeight_value"/>
+    <parameter expression="clearanceHeight_value" name="zClearance"/>
+    <parameter expression="clearanceHeight_value" name="relativeZClearance"/>
+    <parameter expression="true" name="clearanceHeight_absolute"/>
+    <parameter expression="true" name="clearanceAreaSize_group"/>
+    <parameter expression="'from retract height'" name="clearanceAreaHeight_mode"/>
+    <parameter expression="false" name="clearanceAreaHeight_ref"/>
+    <parameter expression="10mm" name="clearanceAreaHeight_offset"/>
+    <parameter expression="0mm" name="clearanceAreaHeight_value"/>
+    <parameter expression="false" name="clearanceAreaHeight_absolute"/>
+    <parameter expression="'from retract radius'" name="clearanceAreaCylinderRadius_mode"/>
+    <parameter expression="false" name="clearanceAreaCylinderRadius_ref"/>
+    <parameter expression="10mm" name="clearanceAreaCylinderRadius_offset"/>
+    <parameter expression="clearanceAreaCylinderRadius_mode == 'radius' ? clearanceAreaCylinderRadius_value : clearanceAreaCylinderRadius_value * 2" name="clearanceAreaCylinderRadius_direct"/>
+    <parameter expression="1mm" name="clearanceAreaCylinderRadius_value"/>
+    <parameter expression="false" name="clearanceAreaCylinderRadius_absolute"/>
+    <parameter expression="'from retract radius'" name="clearanceAreaSphereRadius_mode"/>
+    <parameter expression="false" name="clearanceAreaSphereRadius_ref"/>
+    <parameter expression="10mm" name="clearanceAreaSphereRadius_offset"/>
+    <parameter expression="clearanceAreaSphereRadius_mode == 'radius' ? clearanceAreaSphereRadius_value : clearanceAreaSphereRadius_value * 2" name="clearanceAreaSphereRadius_direct"/>
+    <parameter expression="1mm" name="clearanceAreaSphereRadius_value"/>
+    <parameter expression="false" name="clearanceAreaSphereRadius_absolute"/>
+    <parameter expression="true" name="retractHeight_group"/>
+    <parameter expression="'from stock top'" name="retractHeight_mode"/>
+    <parameter expression="false" name="retractHeight_ref"/>
+    <parameter expression="5mm" name="retractHeight_offset"/>
+    <parameter expression="29.6" name="retractHeight_value"/>
+    <parameter expression="retractHeight_value" name="zRetract"/>
+    <parameter expression="retractHeight_value" name="relativeZRetract"/>
+    <parameter expression="true" name="retractHeight_absolute"/>
+    <parameter expression="clearanceAreaType" name="retractAreaType"/>
+    <parameter expression="'from stock top'" name="retractAreaHeight_mode"/>
+    <parameter expression="false" name="retractAreaHeight_ref"/>
+    <parameter expression="5mm" name="retractAreaHeight_offset"/>
+    <parameter expression="0mm" name="retractAreaHeight_value"/>
+    <parameter expression="true" name="retractAreaHeight_absolute"/>
+    <parameter expression="'from stock od'" name="retractAreaCylinderRadius_mode"/>
+    <parameter expression="false" name="retractAreaCylinderRadius_ref"/>
+    <parameter expression="5mm" name="retractAreaCylinderRadius_offset"/>
+    <parameter expression="retractAreaCylinderRadius_mode == 'radius' ? retractAreaCylinderRadius_value : retractAreaCylinderRadius_value * 2" name="retractAreaCylinderRadius_direct"/>
+    <parameter expression="1mm" name="retractAreaCylinderRadius_value"/>
+    <parameter expression="false" name="retractAreaCylinderRadius_absolute"/>
+    <parameter expression="'from stock od'" name="retractAreaSphereRadius_mode"/>
+    <parameter expression="false" name="retractAreaSphereRadius_ref"/>
+    <parameter expression="5mm" name="retractAreaSphereRadius_offset"/>
+    <parameter expression="retractAreaSphereRadius_mode == 'radius' ? retractAreaSphereRadius_value : retractAreaSphereRadius_value * 2" name="retractAreaSphereRadius_direct"/>
+    <parameter expression="1mm" name="retractAreaSphereRadius_value"/>
+    <parameter expression="false" name="retractAreaSphereRadius_absolute"/>
+    <parameter expression="true" name="topHeight_group"/>
+    <parameter expression="'from stock top'" name="topHeight_mode"/>
+    <parameter expression="false" name="topHeight_ref"/>
+    <parameter expression="0mm" name="topHeight_offset"/>
+    <parameter expression="24.6" name="topHeight_value"/>
+    <parameter expression="true" name="topHeight_absolute"/>
+    <parameter expression="true" name="bottomHeight_group"/>
+    <parameter expression="'from surface bottom'" name="bottomHeight_mode"/>
+    <parameter expression="false" name="bottomHeight_ref"/>
+    <parameter expression="0mm" name="bottomHeight_offset"/>
+    <parameter expression="0.0" name="bottomHeight_value"/>
+    <parameter expression="true" name="bottomHeight_absolute"/>
+    <parameter expression="false" name="tab_passes"/>
+    <parameter expression="true" name="group_passes"/>
+    <parameter expression="0.01mm" name="tolerance"/>
+    <parameter expression="tolerance * 0.5" name="contourTolerance"/>
+    <parameter expression="surfaceTriangulationTolerance" name="totalSurfaceTolerance"/>
+    <parameter expression="tolerance * 0.5" name="surfaceTriangulationTolerance"/>
+    <parameter expression="0.8*(tolerance-totalSurfaceTolerance)" name="calculationTolerance"/>
+    <parameter expression="0.21*(tolerance-totalSurfaceTolerance)" name="thinningTolerance"/>
+    <parameter expression="0.01mm" name="chainingTolerance"/>
+    <parameter expression="calculationTolerance" name="gougingTolerance"/>
+    <parameter expression="false" name="linkInsideOut"/>
+    <parameter expression="'dont care'" name="linkInsideOutside"/>
+    <parameter expression="false" name="collapseBisector"/>
+    <parameter expression="stepover * 0.51" name="collapseBisectorStepover"/>
+    <parameter expression="30deg" name="collapseBisectorAngle"/>
+    <parameter expression="false" name="limitNumberOfStepovers"/>
+    <parameter expression="1" name="numberOfStepovers"/>
+    <parameter expression="Math.round(tool_cornerRadius != 0 ? (Math.sqrt((tool_cornerRadius )^2 - (tool_cornerRadius - tolerance)^2) *2) / Math.sqrt(2.0) * 1000 : (tool_diameter / 4) * 1000) / 1000" name="stepover"/>
+    <parameter expression="5 * tolerance" name="minimumFragmentLength"/>
+    <parameter expression="0" name="fragmentExtensionDistance"/>
+    <parameter expression="'both ways'" name="direction"/>
+    <parameter expression="'dont care'" name="upDownMilling"/>
+    <parameter expression="1deg" name="upDownMillingShallowAngle"/>
+    <parameter expression="false" name="manualProfileDiameter"/>
+    <parameter expression="10mm" name="minimumProfileDiameter"/>
+    <parameter expression="false" name="useStockToLeave"/>
+    <parameter expression="0.1mm" name="stockToLeave"/>
+    <parameter expression="stockToLeave" name="verticalStockToLeave"/>
+    <parameter expression="false" name="simpleStockToLeave"/>
+    <parameter expression="false" name="filletsEnabled"/>
+    <parameter expression="tool_cornerRadius + 2.0" name="filletsCornerRadius"/>
+    <parameter expression="false" name="smoothingFilter"/>
+    <parameter expression="'fitArcs'" name="smoothingFilterMode"/>
+    <parameter expression="0.5mm" name="smoothingFilterMaxSpacing"/>
+    <parameter expression="3deg" name="smoothingFilterMaxAngle"/>
+    <parameter expression="0.5" name="smoothingFilterToleranceFactor"/>
+    <parameter expression="tolerance" name="smoothingFilterTolerance"/>
+    <parameter expression="false" name="useFeedOptimization"/>
+    <parameter expression="25deg" name="reducedFeedChange"/>
+    <parameter expression="tool_diameter * 0.05" name="reducedFeedRadius"/>
+    <parameter expression="tool_diameter * 0.2" name="reducedFeedDistance"/>
+    <parameter expression="tool_feedCutting * 0.25" name="reducedFeedrate"/>
+    <parameter expression="true" name="reduceOnlyInnerCorners"/>
+    <parameter expression="false" name="tab_5axis"/>
+    <parameter expression="true" name="machiningTypeGroup"/>
+    <parameter expression="'three_axis'" name="multiAxisMachiningType"/>
+    <parameter expression="true" name="leadLean"/>
+    <parameter expression="'axisZ'" name="multiAxisRotaryAxis_orientation_mode"/>
+    <parameter expression="false" name="multiAxisRotaryAxis_orientation_axisRotary"/>
+    <parameter expression="false" name="multiAxisRotaryAxis_orientation_cSys"/>
+    <parameter expression="(multiAxisRotaryAxis_orientation_mode == 'surfaceNormalX' || multiAxisRotaryAxis_orientation_mode == 'surfaceNormalY') ? 'surfacePointOrigin' : 'jobOrigin'" name="multiAxisRotaryAxis_origin_mode"/>
+    <parameter expression="false" name="multiAxisRotaryAxis_origin_point"/>
+    <parameter expression="(multiAxisMachiningType == 'four_axis') ? 'tilt_to_rotary_axis' : 'vertical'" name="toolAxisMode"/>
+    <parameter expression="0deg" name="leadAngle"/>
+    <parameter expression="0deg" name="leanAngle"/>
+    <parameter expression="false" name="toFromPoint"/>
+    <parameter expression="false" name="toFromCurve">
+      <CadChain name="cadobject">
+        <Parameters>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+        </Parameters>
+      </CadChain>
+    </parameter>
+    <parameter expression="0deg" name="multiAxisTiltAngleFixed"/>
+    <parameter expression="'setup'" name="toolAxisLimitReferenceZ"/>
+    <parameter expression="(tiltTool) ? 6 * tool_diameter : 2 * tool_diameter" name="smoothingDistance"/>
+    <parameter expression="5" name="smoothingAngle"/>
+    <parameter expression="false" name="fixedAngle"/>
+    <parameter expression="0deg" name="tiltAngle"/>
+    <parameter expression="false" name="tiltTool"/>
+    <parameter expression="(toolAxisMode == 'vertical' || multiAxisMachiningType == 'four_axis') ? 'automatic' : 'from_point'" name="tiltToolMode"/>
+    <parameter expression="false" name="tiltToolToFromPoint"/>
+    <parameter expression="false" name="tiltToolToFromCurve">
+      <CadChain name="cadobject">
+        <Parameters>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+          <Parameter/>
+        </Parameters>
+      </CadChain>
+    </parameter>
+    <parameter expression="false" name="group_axislimits"/>
+    <parameter expression="180" name="maximumTiltValidation"/>
+    <parameter expression="0deg" name="minimumTilt5Axis"/>
+    <parameter expression="90deg" name="maximumTilt5Axis"/>
+    <parameter expression="'remove_toolpath'" name="tiltLimitMode"/>
+    <parameter expression="true" name="polarMachiningGroup"/>
+    <parameter expression="0deg" name="polarLineAngle"/>
+    <parameter expression="'computer'" name="polarMode"/>
+    <parameter expression="false" name="tab_linking"/>
+    <parameter expression="true" name="group_linking"/>
+    <parameter expression="'full'" name="retractionPolicy"/>
+    <parameter expression="'disabled'" name="highFeedrateMode"/>
+    <parameter expression="Math.max(tool_feedCutting; Math.max(tool_feedEntry; tool_feedExit))" name="highFeedrate"/>
+    <parameter expression="true" name="allowRapidRetract"/>
+    <parameter expression="2mm" name="safeDistance"/>
+    <parameter expression="2 * tool_diameter" name="stayDownDistance"/>
+    <parameter expression="true" name="group_leadsTranstions"/>
+    <parameter expression="tool_diameter * 0.1" name="entry_radius"/>
+    <parameter expression="tool_diameter * 0.1" name="entry_verticalRadius"/>
+    <parameter expression="entry_radius" name="leadInRadius"/>
+    <parameter expression="entry_verticalRadius" name="leadInVerticalRadius"/>
+    <parameter expression="tool_diameter * 0.1" name="exit_radius"/>
+    <parameter expression="tool_diameter * 0.1" name="exit_verticalRadius"/>
+    <parameter expression="exit_radius" name="leadOutRadius"/>
+    <parameter expression="exit_verticalRadius" name="leadOutVerticalRadius"/>
+    <parameter expression="'curve'" name="transitionType"/>
+    <parameter expression="true" name="group_entry_drill_positions"/>
+    <parameter expression="false" name="entryPositions"/>
+    <parameter expression="false" name="use_tool_stepdown"/>
+    <parameter expression="1.0mm" name="tool_stepdown"/>
+    <parameter expression="0.2mm" name="tool_finishingStepdown"/>
+    <parameter expression="false" name="use_tool_stepover"/>
+    <parameter expression="tool_diameter * 0.5" name="tool_stepover"/>
+    <parameter expression="tool_diameter * 0.1" name="tool_finishingStepover"/>
+    <parameter expression="'helix'" name="tool_rampType"/>
+    <parameter expression="2.0deg" name="tool_rampAngle"/>
+    <parameter expression="false" name="associatedView"/>
+  </template>
+
+</template-document>

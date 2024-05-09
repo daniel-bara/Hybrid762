@@ -1,0 +1,13 @@
+{
+	"autodeskProduct":	"Fusion",
+	"type":	"addin",
+	"id":	"28b115fa-4ef9-4488-b0e0-75b1a5d33a39",
+	"author":	"Daniel Bara",
+	"description":	{
+		"":	""
+	},
+	"version":	"1",
+	"runOnStartup":	false,
+	"supportedOS":	"windows|mac",
+	"editEnabled":	true
+}
