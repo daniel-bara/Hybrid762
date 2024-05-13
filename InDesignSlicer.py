@@ -45,6 +45,14 @@ class InDeisgnSlicer:
                           0, round((max_Z - config.RAFT_HEIGHT) / increment_mm))
 
         for milling_height in self._generate_slicing_heights(max_Z, config.RAFT_HEIGHT, increment_mm):
+            if setup is None:
+                setup = cam_setup_utils.create_face_milling_setup(self.cam,
+                                                          self.rootComp,
+                                                          f"Defect corr.")
+                if setup is None:
+                    raise Exception("Defect correction setup could not be created")
+                futil.log(f"setup: {setup.name}, ops: {setup.operations[0].name}")
+                operation = setup.operations[0]
             progress_bar.progressValue += 1
             if progress_bar.wasCancelled:
                 raise Exception("Cancelled by user")
@@ -64,13 +72,17 @@ class InDeisgnSlicer:
             if not self.cam.checkToolpath(setup.allOperations):
                 futil.log("defective toolpath", force_console=True)
                 setup.deleteMe()
+                setup = None
+                futil.log("Setup deleted")
+
                 continue
 
             temp_files.planarising = Path.joinpath(temp_files.planarising.parent,
                                                    f"Planarising at {format(milling_height, '.2f')}.tap")
             self.post_processor_connector.post_process_to_temp_files(hybrid_utils.HybridPostConfig(defectCorrection=True),
                                                                      temp_files, planarisingSetup=setup)
-        setup.deleteMe()
+        if setup is not None:
+            setup.deleteMe()
         slicing_extrusion.deleteMe()
         futil.log(
             f"Generated {round(max_Z / increment_mm)} toolpaths in {round(time.time()-planrising_generation_start_time, 2)} seconds", force_console=True)

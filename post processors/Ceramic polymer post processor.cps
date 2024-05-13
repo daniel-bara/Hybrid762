@@ -529,7 +529,12 @@ function onLayer(num) {
 // <<<<< INCLUDED FROM ../common/onLayer.cpi
 
 function insertDefectCorrectionBlock(is_after_last_layer){
-  var newLayer = currentLayer // for easier readability (because this is used during a layer change)
+  if (is_after_last_layer){
+    var newLayer = currentLayer + 1 // in this case there is no layer change
+  }
+  else{
+    var newLayer = currentLayer // for easier readability (because this is used during a layer change)
+  }
   var oldLayer = newLayer - 1 // >= 1 because newLayer is >= 2
   var oldOldLayer = oldLayer - 1 // >= 0 because newLayer is >= 2
   
@@ -543,7 +548,7 @@ function insertDefectCorrectionBlock(is_after_last_layer){
     writeBlock("IF [[#1005 EQ 0] AND [#1006 EQ 0]] GOTO " + integerFormat.format(newLayer*2));  // if nothing to correct, jump to print new layer
     writeBlock("IF [#1006 EQ 0] GOTO " + integerFormat.format(oldLayer*2 + 1)); // if no big defects, only remove over-extrusion
 
-    writeBlock(";PLACEHOLDER_FACE_MILLING at Z", old_layer_base_z.toFixed(2)); // remove old layer
+    writeBlock(";PLACEHOLDER_LAYER_REMOVAL at Z", old_layer_base_z.toFixed(2)); // remove old layer
     writeBlock(commands.toolChangeToPrinting);
 
     writeComment("Setting A to end of layer " + oldOldLayer)
@@ -557,7 +562,7 @@ function insertDefectCorrectionBlock(is_after_last_layer){
 
   if (defect_correction_possible){
     if (!is_after_last_layer){
-      writeBlock(";PLACEHOLDER_FACE_MILLING at Z", old_layer_top_z.toFixed(2)); // only remove over-extrusion
+      writeBlock(";PLACEHOLDER_OVEREXTRUSION_REMOVAL at Z", old_layer_top_z.toFixed(2)); // only remove over-extrusion
       writeBlock(commands.toolChangeToPrinting);
       writeBlock(commands.photo, "#625=" + floatFormat.format(layer_z));
     }
