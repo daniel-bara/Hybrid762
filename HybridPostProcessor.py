@@ -73,7 +73,10 @@ class HybridPostProcessor:
 
         # combine additive with milling
         if hybrid_post_config.defectCorrection and temp_files.planarising:
-            combined_gcode_step2 = self._replace_planarising_placeholders(additive_gcode, temp_files.planarising.parent)
+            combined_gcode_removed_placeholders1 = self._replace_layer_removal_placeholders(
+                additive_gcode, temp_files.planarising.parent)
+            combined_gcode_step2 = self._replace_overextrusion_removal_placeholders(
+                combined_gcode_removed_placeholders1, temp_files.planarising.parent)
         else:
             combined_gcode_step2 = additive_gcode
 
@@ -89,18 +92,31 @@ class HybridPostProcessor:
 
         fusion_utils.show_folder(hybrid_post_config.outputFilePath.parent)
 
-    def _replace_planarising_placeholders(self, additive_gcode: str, planarising_files_folder: Path) -> str:
-        def get_defect_correction_gcode(match: re.Match) -> str:
-            height = float(match.group('height'))
-            planarising_file_path = planarising_files_folder.joinpath(f"Planarising at {format(height, '.2f')}.tap")
-            if Path.exists(planarising_file_path):
-                with open(planarising_file_path) as planarising_gcode:
-                    return ''.join(planarising_gcode.readlines())
-            else:
-                raise RuntimeError(f"planarising gcode not found at {round(height, 2)}")
+    def _get_defect_correction_gcode(self, match: re.Match, planarising_files_folder: Path, throw_on_failure) -> str:
+        height = float(match.group('height'))
+        planarising_file_path = planarising_files_folder.joinpath(f"Planarising at {format(height, '.2f')}.tap")
+        if Path.exists(planarising_file_path):
+            with open(planarising_file_path) as planarising_gcode:
+                return ''.join(planarising_gcode.readlines())
+        else:
+            if throw_on_failure:
+                raise RuntimeError(f"Layer removal gcode not found at {round(height, 2)}")
 
-        placeholder_pattern = re.compile(r";PLACEHOLDER_FACE_MILLING at Z (?P<height>[\d.]+)")
-        return re.sub(placeholder_pattern, get_defect_correction_gcode, additive_gcode)
+            return f'; Planarising toolpath does not exist at {format(height, ".2f")} for over-extrusion removal'
+
+    def _replace_layer_removal_placeholders(self, additive_gcode: str, planarising_files_folder: Path) -> str:
+        placeholder_pattern = re.compile(r";PLACEHOLDER_LAYER_REMOVAL at Z (?P<height>[\d.]+)")
+        return re.sub(placeholder_pattern,
+                      lambda match: self._get_defect_correction_gcode(
+                          match, planarising_files_folder, throw_on_failure=True),
+                      additive_gcode)
+
+    def _replace_overextrusion_removal_placeholders(self, additive_gcode: str, planarising_files_folder: Path) -> str:
+        placeholder_pattern = re.compile(r";PLACEHOLDER_OVEREXTRUSION_REMOVAL at Z (?P<height>[\d.]+)")
+        return re.sub(placeholder_pattern,
+                      lambda match: self._get_defect_correction_gcode(
+                          match, planarising_files_folder, throw_on_failure=False),
+                      additive_gcode)
 
     def _replace_finishing_placeholder(self, additive_gcode: str, finishing_file: Path) -> str:
 

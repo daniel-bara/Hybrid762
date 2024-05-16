@@ -109,6 +109,8 @@ def create_face_milling_setup(cam: adsk.cam.CAM, rootComp: adsk.fusion.Component
         futil.log(f"Setup {new_setup_name} already exists", force_console=True)
         setup.deleteMe()
         return None
+    futil.log(f"Setup {new_setup_name} created")
+    
     setup.name = new_setup_name
     return setup
 
@@ -183,9 +185,11 @@ def _try_update_adaptive2d_face(cam: adsk.cam.CAM, comp: adsk.fusion.Component, 
 
     # select the top face of one of the bodies
     if all(map(lambda f: f is None, top_faces)):
+        futil.log("no top face 1")
         return None
     top_face = next(filter(lambda f: f is not None, top_faces), None)
     if top_face is None:
+        futil.log("no top face 2")
         return None
     futil.log(f"number of bods: {comp.bRepBodies.count}")
     futil.log(f"model name: {comp.name}")
