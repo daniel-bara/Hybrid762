@@ -550,10 +550,15 @@ function insertDefectCorrectionBlock(is_after_last_layer){
 
     writeBlock(";PLACEHOLDER_LAYER_REMOVAL at Z", old_layer_base_z.toFixed(2)); // remove old layer
     writeBlock(commands.toolChangeToPrinting);
+    writeBlock(commands.photo, "#625=" + floatFormat.format(old_layer_base_z));
 
-    writeComment("Setting A to end of layer " + oldOldLayer)
+    
     var old_a = layer_As[oldOldLayer]
     if (old_a == null) old_a = 0;
+    writeComment("Increase pressure in extruder")
+    writeBlock(gFormat.format(1), gFormat.format(91), aOutput.format(0.01), feedOutput.format(0.7))
+    writeBlock(gFormat.format(90))
+    writeComment("Setting A to end of layer " + oldOldLayer)
     writeBlock(commands.resetAxis, aOutput.format(old_a));
 
     writeBlock("GOTO " + integerFormat.format(oldLayer*2));
