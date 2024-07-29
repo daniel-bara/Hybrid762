@@ -21,6 +21,7 @@ COMPANY_NAME = 'UniOfLeeds'
 DEFECT_CORRECTION_SETUP_NAME = "Defect Correction (with operation template)"
 LAYER_HEIGHT = 0.6
 RAFT_HEIGHT = 1.8
+CENTER_BODY_IN_MANUFACTURING_MODEL = True
 
 OUTPUT_FOLDER = Path(__file__).parent.joinpath('outputs')
 

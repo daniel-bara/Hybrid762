@@ -4,6 +4,8 @@ import adsk.core
 import adsk.cam
 import adsk.fusion
 from .lib import fusion360utils as futil
+from . import cam_setup_utils
+from . import config
 
 
 def get_setups(doc: adsk.core.Document) -> list[adsk.cam.Setup]:
@@ -45,6 +47,17 @@ def assert_CAM_setup_correct(ui: adsk.core.UserInterface, doc: adsk.core.Documen
                    title="No CAM operations",
                    icon=adsk.core.MessageBoxIconTypes.WarningIconType)
         raise AssertionError('No Manufacturing operations are set up in the active document.')
+    
+    if config.CENTER_BODY_IN_MANUFACTURING_MODEL:
+        for model in cam.manufacturingModels:
+            if not cam_setup_utils.body_is_in_middle(model):
+                result = messageBox(futil.ui, f"The current settings require the part to be centered, but the body's center of mass is not at the origin in the Manufacturing Model \"{model.name}\". You can delete the Manufacturing Model \"{model.name}\" and run the Setup Wizard, or move the body in the Manufacturing Model manually. \n"+
+                                    "Do you want to continue without the part being centered?",
+                                        "Part not centered in Manufacturing Model",
+                                        buttons=adsk.core.MessageBoxButtonTypes.YesNoButtonType,
+                                        icon=adsk.core.MessageBoxIconTypes.WarningIconType)
+                if result == adsk.core.DialogResults.DialogNo:
+                    raise AssertionError("Part not centered")
 
 
 def get_setup_by_name(doc: adsk.core.Document, name: str) -> adsk.cam.Setup | None:
