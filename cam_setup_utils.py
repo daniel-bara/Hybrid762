@@ -164,7 +164,27 @@ def _try_create_manufacturing_model(cam: adsk.cam.CAM, manufacturing_model_name:
         return None
     if raft_offset and is_new:
         _offset_for_raft(occs)
+    if config.CENTER_BODY_IN_MANUFACTURING_MODEL:
+        if is_new:
+            _move_to_middle(occs)
     return occs
+
+def body_is_in_middle(manufacturing_model: adsk.cam.ManufacturingModel):
+    occs = _getValidOccurrences(manufacturing_model.occurrence)
+    occs:list[adsk.fusion.Occurrence]
+    futil.log(f"checking body is in middle: {occs[0].getPhysicalProperties().centerOfMass}")
+    return all(map(lambda x: abs(x) < 0.1, [occs[0].getPhysicalProperties().centerOfMass.x, occs[0].getPhysicalProperties().centerOfMass.y]))
+
+def _move_to_middle(occs:list[adsk.fusion.Occurrence]):
+    body = occs[0].component.bRepBodies[0]
+    to_move = adsk.core.ObjectCollection.create()
+    to_move.add(body)
+    move_input = occs[0].component.features.moveFeatures.createInput2(to_move)
+
+    x_offset = adsk.core.ValueInput.createByReal(-body.getPhysicalProperties().centerOfMass.x)
+    y_offset = adsk.core.ValueInput.createByReal(-body.getPhysicalProperties().centerOfMass.y)
+    move_input.defineAsTranslateXYZ(x_offset, y_offset, adsk.core.ValueInput.createByReal(0), True)
+    occs[0].component.features.moveFeatures.add(move_input)
 
 def _offset_for_raft(occs:list[adsk.fusion.Occurrence]):
     '''offset milling manufacturing model to compensate for for raft in 3D printing'''
