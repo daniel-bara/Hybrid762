@@ -121,3 +121,4 @@ class AutoSetupButton:
             if defect_correction_setup is None:
                 raise RuntimeError("Could not create defect correction setup")
         progress_bar.hide()
+        fusion_utils.messageBox(ui, "Setups have been created.", "Setups Created")
